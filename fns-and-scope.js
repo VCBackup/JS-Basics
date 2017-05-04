@@ -32,8 +32,7 @@ function getName(){
 
   //Code Here
 function welcome(){
-  getName();
-  return "Welcome," + name + "!";
+  return "Welcome, " + getName();
 }
 
 //////////////////PROBLEM 4////////////////////
@@ -44,8 +43,8 @@ function welcome(){
 //What is the difference between arguments and parameters?
 
   //Answer Here
-  //Parameters is the name of a value that is passed into a function.
-  //Arguments are the actual values that are passed into a funciton.
+  //Parameter: The name given to a value that is passed into a function.
+  //Argument: The actual value that is passed into a funciton.
 
 //////////////////PROBLEM 5////////////////////
 
@@ -75,9 +74,11 @@ function welcome(){
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-var newMyName = myName();
+function newMyName(){
+  return myName();
+}
 //Now alert the result of invoking newMyName
-alert(newMyName);
+alert(newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -91,11 +92,14 @@ function outerFn(){
   function anyNy(){
     return "Daniel Moore";
   }
+      return anyNy();
 }
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-var innerFn = outerFn();
+function innerFn(){
+  return outerFn();
+}
 
 //Now invoke innerFn.
 console.log(innerFn);
